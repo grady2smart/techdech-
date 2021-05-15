@@ -28,7 +28,7 @@
 <key>metadata</key>
 <dict>
 <key>bundle-identifier</key>
-<string>co.starfiles.App.Installer</string>
+<string>io.tutubox.spotify++</string>
 <key>bundle-version</key>
 <string>1</string>
 <key>kind</key>
