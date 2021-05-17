@@ -10,7 +10,7 @@
 <key>kind</key>
 <string>software-package</string>
 <key>url</key>
-<string>https%3A%2F%2Ftutubox.io%2Fplists%2FLodging%2FSpotilife+Sposify.plist</string>
+<string>https://www.dropbox.com/s/larld050ed7k7pu/Taurine-1.0.4.ipa?dl=1</string>
 </dict>
 <dict>
 <key>kind</key>
@@ -28,13 +28,13 @@
 <key>metadata</key>
 <dict>
 <key>bundle-identifier</key>
-<string>io.tutubox.spotify++</string>
+<string>taurine.com.dropbox</string>
 <key>bundle-version</key>
 <string>1</string>
 <key>kind</key>
 <string>software</string>
 <key>title</key>
-<string>spotify++</string>
+<string>taurine</string>
 </dict>
 </dict>
 </array>
