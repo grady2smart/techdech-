@@ -102,7 +102,7 @@ color: #1A1A1A;
 }
 .apps a{
     display:block;
-    width:55px;
+    width:100px;
     padding:5px;
     border-radius:50px;
     float: right;
@@ -113,7 +113,7 @@ color: #1A1A1A;
 }
 .apps a:hover{
     display:block;
-    width:55px;
+    width:100px;
     padding:5px;
     border-radius:50px;
     float: right;
