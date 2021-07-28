@@ -2,12 +2,12 @@
   (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
 ) {
   .nav a:hover {
-  color: #A02FE8;
+  color: #242628;
   }
   .nav a {
   font-size: 37px;
   text-decoration:none;
-  color: #ffffff;
+  color: #242628;
   }
   .nav h23 {
   color: #242628;
