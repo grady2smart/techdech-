@@ -7,7 +7,7 @@
   .nav a {
   font-size: 37px;
   text-decoration:none;
-  color: #242628;
+  color: #1C82E7;
   }
   .nav h23 {
   color: #1C82E7;
@@ -24,9 +24,9 @@
     z-index: 99;
     text-align: center;
     display: block;
-    padding: 15px;
+    padding: 5px;
     margin-bottom: 10px;
-    width: 80%;
+    width: 70%;
     opacity: 50;
     background: #242628;
     border-radius: 20px;
