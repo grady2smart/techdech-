@@ -16,7 +16,8 @@
   opacity: 0;
   }
   .nav {
-    border-style: none;
+    border-style: solid;
+    color: #1C82E7;
     font-family: Framework7 Icons;
     position: fixed;
     bottom: 0px;
