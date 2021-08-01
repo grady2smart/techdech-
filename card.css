@@ -1,0 +1,203 @@
+/* some values are meant to work in this app simulation, in a responsive enviroment you should adjust some values and positioning */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sen', sans-serif;
+  background: rgb(248,248,248);
+  background: radial-gradient(circle, rgba(248,248,248,1) 40%, rgba(148,224,233,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@keyframes item-start {
+  0%   { transform: translate3d(-50%,0,0) scale(1); }
+  100%  { transform: translate3d(-50%,0,0) scale(0.96); }
+}
+
+@keyframes item-bounce {
+  0% { margin-top: 0 }
+  75% { margin-top: -24px }
+  100% { margin-top: 0 }
+}
+
+@keyframes item-collapse {
+  0% { margin-top: 0 }
+  75% { margin-top: 24px }
+  100% { margin-top: 0 }
+}
+
+#app,
+.item.active {
+  scrollbar-width: none;
+  -ms-overflow-style: none;  
+}
+
+#app::-webkit-scrollbar,
+.item.active::-webkit-scrollbar {
+  display: none;
+}
+
+#app {
+  width: 375px;
+  height: 667px;
+  margin: 3rem auto;
+  border-radius: 20px;
+  overflow: scroll;
+  background-color: #fff;
+  box-shadow: 0 24px 80px -14px rgba(0,0,0,.34);
+}
+
+#app.noscroll {
+  overflow: hidden;
+}
+
+.app-container {
+  position: relative;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.item {
+  position: absolute;
+  left: 50%;
+  width: calc(100% - 64px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 1s;
+  background-color: #fff;
+  transform: translate3d(-50%,0,0);
+  transition: top .225s, width .1s, height .1s;
+  box-shadow: 0 8px 40px -4px rgba(0,0,0,0.14);
+}
+
+.close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+  font-size: 1.6em;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.item-title {
+  max-width: 311px; /* prevent line-breaks from changing (.item collapsed size) */
+  padding: 24px 72px 24px 24px;
+  box-sizing: border-box;
+}
+
+.item-title.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  z-index: 2;
+}
+
+.item-image {
+  position: relative;
+  /*height: 100%;*/
+  height: 240px;
+  overflow: hidden;
+}
+
+.item-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 375px;⁄* 100vh */
+  height: auto;
+  transform: translate3d(-50%,-50%,0);
+}
+
+.item-content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  font-size: 0.94em;
+  line-height: 1.5;
+}
+
+.item.start {
+  animation: item-start .2s forwards;
+}
+
+.item.active {
+  overflow: scroll;
+  z-index: 1;
+  width: 100%;
+  height: 667px;
+  transition: top .225s, width .3s, height .3s;
+}
+
+.item.active.bounce {
+  animation: item-bounce .3s forwards;
+}
+
+.item.collapsing.bounce {
+  animation: item-collapse .3s forwards;
+}
+
+.item.active .close {
+  opacity: 1;
+  visibility: visible;
+}
+
+.item.active .item-content {
+  height: auto;
+  overflow: auto;
+  opacity: 1;
+  transition: opacity .1s;
+  padding: 32px 24px;
+}
+
+.item.active .item-title + .item-content {
+  padding-top: 8px;
+}
+
+/* typography */
+h1,h2,h3,h4,h5,h6 {
+  margin: 0 auto .8em;
+}
+.item h4 {
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #808080;
+  margin-bottom: 0.2em;
+}
+.item-title.absolute h4 {
+  color: #fff;
+  opacity: 0.72;
+}
+.item h3 {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.item-content p {
+  margin-top: 0;
+  color: #808080;
+}
+.item-content p:last-child {
+  margin-bottom: 0;
+}
+.item-content strong {
+  color: #000;
+}
