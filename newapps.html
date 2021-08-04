@@ -4,6 +4,7 @@
         <script async="async" data-cfasync="false" src="//upgulpinon.com/1?z=4397962"></script>
         <script type="text/javascript" src="//inpage-push.com/400/4398021" data-cfasync="false" async="async"></script>
         <title>TechDech</title>
+        <link rel="stylesheet" href="searchbar.css">
         <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="fworkicons.css">
         <link rel="stylesheet" href="main.css">
@@ -22,7 +23,11 @@
 <link rel="apple-touch-icon" href="favicon.ico"/>
         
 data-search-container="section group" data-search-in="apps">
+<center>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
 
+<ul id="myUL">
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -31,7 +36,8 @@ data-search-container="section group" data-search-in="apps">
                         <img src="img/OdysseyIcon.png">
                         <h1>Odyssey</h1>
 </div>
-
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -40,7 +46,8 @@ data-search-container="section group" data-search-in="apps">
                         <img src="img/TaurineIcon.png">
                         <h1>Taurine</h1>
 </div>
-
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -49,7 +56,8 @@ data-search-container="section group" data-search-in="apps">
                         <img src="img/iNDSIcon.png">
                         <h1>iNDS</h1>
 </div>
-
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -58,7 +66,8 @@ data-search-container="section group" data-search-in="apps">
                         <img src="img/SpotifyIcon.png">
                         <h1>Spotify++</h1>
 </div>
-
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -68,7 +77,8 @@ data-search-container="section group" data-search-in="apps">
                         <h1>TutuBox</h1>
                         
                     </div>
-
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -78,7 +88,8 @@ data-search-container="section group" data-search-in="apps">
                         <h1>unc0ver</h1>
                         
                     </div>
-
+</li>
+<li>
  <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -88,7 +99,31 @@ data-search-container="section group" data-search-in="apps">
                         <h1>techdech</h1>
                         
                     </div>
+</li>
+</ul>
+     
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, div, h1, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
 
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    h1 = li[i].getElementsByTagName("h1")[0];
+    txtValue = h1.textContent || h1.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+     
 </div>
                 
 <div>
