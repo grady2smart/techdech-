@@ -4,6 +4,7 @@
         <title>TechDech</title>
         <link rel="stylesheet" href="apphub/apphub.css">
         <link rel="stylesheet" href="font.css">
+        <link rel="stylesheet" href="font.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,6 +33,10 @@
 <link rel="apple-touch-icon" href="favicon.ico"/>
 
 <center>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
+
+<ul id="myUL">
+<li>
             <div class="section group">
                 <div class="col span_1_of_4">
                     <div class="apps">
@@ -39,7 +44,8 @@
                         <img src="img/devsiconappbox.png">
                         <h1>devs</h1>
 </div>
-
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -48,7 +54,8 @@
                         <img src="img/OdysseyIcon.png">
                         <h1>Odyssey</h1>
 </div>
-
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -56,8 +63,9 @@
                         <a href="itms-services://?action=download-manifest&url=https://www.techdech.ga/2manifest.plist">square_arrow_down_on_square_fill</a>
                         <img src="img/TaurineIcon.png">
                         <h1>Taurine</h1>
-</div>
-
+</div> 
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -66,7 +74,8 @@
                         <img src="img/iNDSIcon.png">
                         <h1>iNDS</h1>
 </div>
-
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -75,7 +84,8 @@
                         <img src="img/SpotifyIcon.png">
                         <h1>Spotify++</h1>
 </div>
-
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -85,7 +95,8 @@
                         <h1>TutuBox</h1>
                         
                     </div>
-
+</li>
+<li>
 <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -95,7 +106,8 @@
                         <h1>unc0ver</h1>
                         
                     </div>
-
+</li>
+<li>
  <center>
             <div class="section group">
                 <div class="col span_1_of_4">
@@ -105,5 +117,29 @@
                         <h1>techdech</h1>
                         
                     </div>
+</li>
+</ul>
+     
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, div, h1, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    h1 = li[i].getElementsByTagName("h1")[0];
+    txtValue = h1.textContent || h1.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
 
 </html>
