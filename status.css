@@ -11,16 +11,18 @@
     display:inline-block;
 }
 
-.button a{
-    display:block;
-    padding:15px;
-    width:80%;
-    border-radius:30px;
-    background-color:#1C82E7;
-    color:#fff;
-    font-size:15px;
-    font-weight:700;
-    opacity:1.0;
+.button a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin-left: 250px;
+    width: 50%;
+    border-radius: 30px;
+    background-color: #1C82E7;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 1.0;
 }
 
 .button p{
